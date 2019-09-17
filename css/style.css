@@ -83,6 +83,29 @@ body {
   color: white;
 }
 
+/* welecome section end */
+
+/* about section */
+
+#about {
+  padding: 2rem 0.2rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+#about .title {
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Berkshire swash", Arial, Helvetica, sans-serif;
+}
+
+#about .content {
+  text-align: center;
+}
+
+/* about section end */
+
 /* for small screens */
 
 @media (max-width: 900px) {
@@ -93,15 +116,15 @@ body {
   #welcome .greet {
     font-size: 2rem;
   }
+
+  #about .title {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 500px) {
   #welcome .title {
     font-size: 3rem;
-  }
-
-  #welcome .greet {
-    font-size: 2rem;
   }
 
   .navbar .brand {
