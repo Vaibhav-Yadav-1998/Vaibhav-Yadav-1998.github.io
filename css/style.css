@@ -1,11 +1,28 @@
 @import url("https://fonts.googleapis.com/css?family=Berkshire+Swash&display=swap");
 
+:root {
+  --gradient: linear-gradient(
+    60deg,
+    #0087ff,
+    #008ef4,
+    #0093e5,
+    #0096d5,
+    #00a3d5,
+    #00bbe1,
+    #00d3e7,
+    #11eae7
+  );
+  --primary-color: rgba(0, 0, 0, 0.9);
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
   width: 100%;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--primary-color);
+  overflow-x: hidden;
 }
 
 /* navbar section starts */
@@ -15,7 +32,7 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: var(--primary-color);
   padding: 1rem;
 }
 
@@ -59,17 +76,7 @@ body {
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  background: linear-gradient(
-    60deg,
-    #0087ff,
-    #008ef4,
-    #0093e5,
-    #0096d5,
-    #00a3d5,
-    #00bbe1,
-    #00d3e7,
-    #11eae7
-  );
+  background: var(--gradient);
 }
 
 #welcome .title {
@@ -92,6 +99,8 @@ body {
   font-size: 1.5rem;
   line-height: 1.5;
   font-weight: 600;
+  background-color: var(--primary-color);
+  color: white;
 }
 
 #about .title {
@@ -105,6 +114,72 @@ body {
 }
 
 /* about section end */
+
+/* project section */
+
+#projects {
+  background: var(--gradient);
+  width: 100%;
+  color: white;
+  padding: 2rem 0.2rem;
+  margin: 0;
+  text-align: center;
+}
+
+#projects .title {
+  font-family: "Berkshire swash", Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+}
+
+#projects .grid {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#projects .project {
+  max-width: 350px;
+  margin: 2rem 1rem;
+  border: 5px solid;
+  border-radius: 0.3rem;
+}
+
+.project-img {
+  display: block;
+  max-width: 100%;
+  min-height: 307px;
+  margin: 0;
+  padding: 0;
+}
+
+.project-name {
+  display: block;
+  text-decoration: none;
+  background-color: white;
+  color: #0087ff;
+  margin: 0;
+  padding: 1rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.project-name:hover {
+  text-decoration: underline;
+}
+
+/* project section ends */
+
+footer {
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  word-spacing: 5px;
+}
+
+footer a {
+  color: white;
+}
 
 /* for small screens */
 
@@ -133,5 +208,9 @@ body {
 
   .navbar .nav-items {
     width: 100%;
+  }
+
+  .project-name {
+    font-size: 1.1rem;
   }
 }
